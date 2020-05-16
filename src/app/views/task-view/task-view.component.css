@@ -1,0 +1,28 @@
+
+
+
+.TaskViewComponent {
+  background-color: rgb(223, 193, 155);
+
+  border-style: solid;
+  border-radius: 5px;
+
+  width: 80%;
+
+  margin: 10px;
+
+}
+
+
+.InlineBlock{
+  display: inline-block;
+}
+
+
+.Status{
+
+  float: right;
+}
+
+
+

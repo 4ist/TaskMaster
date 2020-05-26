@@ -1,5 +1,11 @@
 export interface Task {
   id: number;
   description: string;
-  completed: boolean;
+  status: Status;
+}
+
+export enum Status {
+  Incomplete,
+  Complete,
+  InProgress
 }

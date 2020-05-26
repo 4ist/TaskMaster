@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../models/task';
+import { Status } from '../models/task';
+import { TaskGetterService } from '../task-getter.service';
 
 
 @Component({
@@ -9,18 +11,12 @@ import { Task } from '../models/task';
 })
 export class TaskListComponent implements OnInit {
 
-  myTask: Task =
-  {
-    id: 1,
-    description: "do some dishes",
-    completed: false
-  };
-
-  tasks: Task[];
-
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  tasks: Task[] = TaskGetterService.GetTasks();
+
 
 }

@@ -33,5 +33,9 @@ export class TaskViewComponent implements OnInit {
       task.status = Status.Incomplete;
   }
 
+  OpenDetails(event: Event){
+    console.log(event);
+  }
+
 
 }

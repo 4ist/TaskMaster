@@ -3,13 +3,13 @@
 <div class="TaskViewComponent">
 
   <div class="Task"><!--on click make height 100 px to see a description-->
-    <div class="Submit"  (click)="ToggleStatus(task)">
+    <div class="Submit" (click)="ToggleStatus(task)">
       <label>{{GetUnicodeStatus(task)}}</label>
     </div>
 
     <div class="Info">
       <div class="InlineBlock">Task: {{task.description}}</div>
-      <div class="Status">dropdown indicator</div>
+      <div class="Status" (click)="OpenDetails($event)">dropdown indicator</div>
     </div>
   </div>
 

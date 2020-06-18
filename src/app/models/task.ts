@@ -1,5 +1,6 @@
 export interface Task {
   id: number;
+  title: string;
   description: string;
   status: Status;
 }
@@ -7,5 +8,5 @@ export interface Task {
 export enum Status {
   Incomplete,
   Complete,
-  InProgress
+  InProgress,
 }

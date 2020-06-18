@@ -1,22 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Task } from '../models/task';
-import { Status } from '../models/task';
-import { TaskGetterService } from '../task-getter.service';
+import {
+    Component,
+    OnInit,
+} from '@angular/core';
 
+import { Task } from '../models/task';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent implements OnInit {
+  public tasks: Task[] = [];
 
-  constructor() { }
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
+    this.tasks = this.taskService.getTasks();
   }
-
-  tasks: Task[] = TaskGetterService.GetTasks();
-
-
 }

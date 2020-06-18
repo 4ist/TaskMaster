@@ -1,18 +1,16 @@
-
-
 <div class="TaskViewComponent">
-
-  <div class="Task"><!--on click make height 100 px to see a description-->
-    <div class="Submit" (click)="ToggleStatus(task)">
-      <label>{{GetUnicodeStatus(task)}}</label>
+  <div class="Task">
+    <div class="Submit" (click)="onToggleStatus()">
+      <label>{{ getUnicodeStatus(task) }}</label>
     </div>
-
-    <div class="Info">
-      <div class="InlineBlock">Task: {{task.description}}</div>
-      <div class="Status" (click)="OpenDetails($event)">dropdown indicator</div>
+    <div class="task-container">
+      <div class="Info">
+        <div class="InlineBlock">Task: {{ task.title }}</div>
+        <button class="Status" (click)="onToggleDetails()">Read More</button>
+      </div>
+      <div *ngIf="expanded" class="description">
+        <span>{{ task.description }}</span>
+      </div>
     </div>
   </div>
-
 </div>
-
-
